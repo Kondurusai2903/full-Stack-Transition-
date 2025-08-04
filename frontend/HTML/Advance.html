@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Details & Summary</title>
+  </head>
+  <body>
+    <h2>FAQ</h2>
+
+    <details>
+      <summary>What is HTML?</summary>
+      <p>HTML is the structure of a web page.</p>
+    </details>
+
+    <details>
+      <summary>What is CSS?</summary>
+      <p>CSS is used to style web pages.</p>
+    </details>
+
+    <h2>Dialog Demo</h2>
+
+    <button onclick="document.getElementById('myDialog').showModal()">Open Modal</button>
+
+    <dialog id="myDialog">
+      <p>Hello Macha! This is a native modal 🔥</p>
+      <button onclick="document.getElementById('myDialog').close()">Close</button>
+    </dialog>
+
+    <h2>System Stats</h2>
+
+    <p>Battery Level:</p>
+    <meter value="0.7" min="0" max="1">70%</meter>
+
+    <p>File Upload Progress:</p>
+    <progress value="40" max="100"></progress>
+
+    <h2>Template Example</h2>
+
+    <template id="cardTemplate">
+      <div class="card" style="border: 1px solid black; margin: 5px; padding: 10px">
+        <h3></h3>
+        <p></p>
+      </div>
+    </template>
+
+    <div id="container"></div>
+
+    <script>
+      const template = document.getElementById('cardTemplate')
+      const container = document.getElementById('container')
+      const data = [
+        { title: 'JS', desc: 'Frontend Logic' },
+        { title: 'HTML', desc: 'Page Structure' },
+        { title: 'CSS', desc: 'Page Styling' },
+      ]
+
+      data.forEach((item) => {
+        const clone = template.content.cloneNode(true)
+        clone.querySelector('h3').textContent = item.title
+        clone.querySelector('p').textContent = item.desc
+        container.appendChild(clone)
+      })
+    </script>
+  </body>
+</html>

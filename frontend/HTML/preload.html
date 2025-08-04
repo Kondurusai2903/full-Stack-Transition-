@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Performance Demo</title>
+
+    <!-- Preload important resource -->
+    <link rel="preload" href="hero.jpg" as="image" />
+
+    <!-- Prefetch next page -->
+    <link rel="prefetch" href="/next-page.html" />
+
+    <!-- Lazy load heavy image -->
+    <img src="large-image.jpg" loading="lazy" alt="Nature" />
+  </head>
+  <body>
+    <!-- ✅ preload → Critical assets load faster 
+         ✅ prefetch → Preloads future page for smooth navigation 
+         ✅ loading="lazy"
+     -->
+    → Loads only when visible
+    <h1>Performance-Optimized Page</h1>
+  </body>
+</html>

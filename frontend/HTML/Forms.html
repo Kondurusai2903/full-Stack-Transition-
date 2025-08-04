@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Input Types</title>
+  </head>
+  <body>
+    <h2>Contact Form</h2>
+    <form action="/submit" method="POST">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required />
+      <br /><br />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+      <br /><br />
+
+      <input type="submit" value="Send" />
+    </form>
+    <h2>Registration Form</h2>
+    <form>
+      <!-- Text Inputs -->
+      <input type="text" placeholder="Username" /><br /><br />
+      <input type="password" placeholder="Password" /><br /><br />
+
+      <!-- Numbers and Dates -->
+      <input type="number" placeholder="Age" /><br /><br />
+      <input type="date" /><br /><br />
+
+      <!-- File Upload -->
+      <input type="file" /><br /><br />
+
+      <!-- Color Picker -->
+      <input type="color" /><br /><br />
+
+      <!-- Range Slider -->
+      <label>Volume:</label>
+      <input type="range" min="0" max="100" /><br /><br />
+
+      <input type="submit" />
+    </form>
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <title>Radio & Checkbox</title>
+      </head>
+      <body>
+        <h2>Survey Form</h2>
+        <form>
+          <p>Choose your gender:</p>
+          <input type="radio" id="male" name="gender" value="male" />
+          <label for="male">Male</label>
+
+          <input type="radio" id="female" name="gender" value="female" />
+          <label for="female">Female</label>
+
+          <p>Skills:</p>
+          <input type="checkbox" id="html" name="skills" value="HTML" />
+          <label for="html">HTML</label>
+
+          <input type="checkbox" id="css" name="skills" value="CSS" />
+          <label for="css">CSS</label>
+
+          <br /><br />
+          <input type="submit" />
+        </form>
+
+        <!DOCTYPE html>
+        <html lang="en">
+          <head>
+            <meta charset="UTF-8" />
+            <title>Select & Datalist</title>
+          </head>
+          <body>
+            <h2>Form Controls</h2>
+            <form>
+              <!-- Dropdown with Groups -->
+              <label for="car">Choose a car:</label>
+              <select id="car" name="car">
+                <optgroup label="Electric">
+                  <option>Tesla</option>
+                  <option>Rivian</option>
+                </optgroup>
+                <optgroup label="Petrol">
+                  <option>BMW</option>
+                  <option>Audi</option>
+                </optgroup>
+              </select>
+
+              <br /><br />
+
+              <!-- Datalist for Autocomplete -->
+              <label for="city">Enter City:</label>
+              <input list="cities" id="city" name="city" />
+              <datalist id="cities">
+                <option value="Hyderabad"></option>
+                <option value="Bangalore"></option>
+                <option value="Delhi"></option>
+              </datalist>
+            </form>
+
+            <!DOCTYPE html>
+            <html lang="en">
+              <head>
+                <meta charset="UTF-8" />
+                <title>Fieldset & Progress</title>
+              </head>
+              <body>
+                <form>
+                  <fieldset>
+                    <legend>Login Info</legend>
+                    <label>Username:</label>
+                    <input type="text" /><br /><br />
+                    <label>Password:</label>
+                    <input type="password" />
+                  </fieldset>
+
+                  <br />
+
+                  <label>Upload Progress:</label>
+                  <progress value="40" max="100"></progress>
+                </form>
+              </body>
+            </html>
+          </body>
+        </html>
+      </body>
+    </html>
+  </body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Basic Form</title>
+  </head>
+  <body>
+    
+  </body>
+</html> -->

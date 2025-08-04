@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Image Example</title>
+  </head>
+  <body>
+    <h2>My Profile</h2>
+    <img src="profile.jpg" alt="Sai Profile Photo" width="200" loading="lazy" />
+
+    <!-- Responsive Image -->
+    <img
+      src="small.jpg"
+      srcset="medium.jpg 600w, large.jpg 1000w"
+      sizes="(max-width: 600px) 100vw, 600px"
+      alt="Beach View"
+    />
+
+    <h2>Responsive Picture</h2>
+    <picture>
+      <source media="(min-width: 800px)" srcset="large.jpg" />
+      <source media="(min-width: 500px)" srcset="medium.jpg" />
+      <img src="small.jpg" alt="Mountain View" />
+    </picture>
+
+    <h2>Product Demo Video</h2>
+    <video width="400" controls autoplay muted loop poster="thumbnail.jpg">
+      <source src="demo.mp4" type="video/mp4" />
+      <source src="demo.webm" type="video/webm" />
+      Your browser does not support the video tag.
+    </video>
+
+    <h2>Background Music</h2>
+    <audio controls autoplay loop>
+      <source src="music.mp3" type="audio/mpeg" />
+      <source src="music.ogg" type="audio/ogg" />
+      Your browser does not support the audio element.
+    </audio>
+
+    <h2>YouTube Embed</h2>
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+      title="YouTube video"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    >
+    </iframe>
+
+    <h2>Google Maps Embed</h2>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18..."
+      width="600"
+      height="450"
+      style="border: 0"
+      allowfullscreen=""
+      loading="lazy"
+    >
+    </iframe>
+  </body>
+</html>
