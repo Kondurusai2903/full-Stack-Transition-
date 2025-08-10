@@ -1,0 +1,15 @@
+.trans {
+  background-color: green;
+}
+
+/* .box {
+  width: 200px;
+  height: 200px;
+  background: crimson;
+  transition: transform 0.5s ease;
+  padding: 10px;
+}
+
+.box:hover {
+  transform: rotate(20deg) scale(2);
+} */

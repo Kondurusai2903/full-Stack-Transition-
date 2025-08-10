@@ -1,0 +1,173 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Transform Playground</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: #111;
+        color: white;
+        font-family: sans-serif;
+        padding: 20px;
+      }
+
+      h1 {
+        margin-bottom: 20px;
+      }
+
+      .box {
+        width: 150px;
+        height: 150px;
+        background: linear-gradient(45deg, #ff4b2b, #ff416c);
+        border-radius: 10px;
+        transition: transform 0.2s linear;
+        margin-bottom: 30px;
+        animation: bounce 0.8s ease-in infinite;
+      }
+      @keyframes bounce {
+        0% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-50px);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+
+      .controls {
+        display: grid;
+        grid-template-columns: 150px 1fr;
+        gap: 10px;
+        width: 400px;
+        background: #222;
+        padding: 20px;
+        border-radius: 10px;
+      }
+
+      label {
+        text-align: right;
+        padding-right: 10px;
+        font-size: 14px;
+      }
+
+      input[type='range'] {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>🎨 Interactive Transform Playground</h1>
+
+    <div class="box" id="box"></div>
+
+    <div class="controls">
+      <label>Translate X (px)</label>
+      <input type="range" id="translateX" min="-200" max="200" value="0" />
+
+      <label>Translate Y (px)</label>
+      <input type="range" id="translateY" min="-200" max="200" value="0" />
+
+      <label>Rotate (deg)</label>
+      <input type="range" id="rotate" min="-180" max="180" value="0" />
+
+      <label>Scale</label>
+      <input type="range" id="scale" min="0.1" max="2" step="0.1" value="1" />
+
+      <label>Skew X (deg)</label>
+      <input type="range" id="skewX" min="-45" max="45" value="0" />
+
+      <label>Skew Y (deg)</label>
+      <input type="range" id="skewY" min="-45" max="45" value="0" />
+    </div>
+
+    <script>
+      const box = document.getElementById('box')
+      const controls = ['translateX', 'translateY', 'rotate', 'scale', 'skewX', 'skewY']
+
+      const updateTransform = () => {
+        const tx = document.getElementById('translateX').value
+        const ty = document.getElementById('translateY').value
+        const rot = document.getElementById('rotate').value
+        const sc = document.getElementById('scale').value
+        const sx = document.getElementById('skewX').value
+        const sy = document.getElementById('skewY').value
+
+        box.style.transform = `
+        translate(${tx}px, ${ty}px)
+        rotate(${rot}deg)
+        scale(${sc})
+        skew(${sx}deg, ${sy}deg)
+      `
+      }
+
+      controls.forEach((id) => {
+        document.getElementById(id).addEventListener('input', updateTransform)
+      })
+
+      updateTransform()
+    </script>
+  </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transform Playground</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+        background: #111;
+        color: white;
+        font-family: sans-serif;
+      }
+
+      h1 {
+        margin-bottom: 20px;
+      }
+
+      .card {
+        width: 200px;
+        height: 250px;
+        background: linear-gradient(45deg, #ff4b2b, #ff416c);
+        border-radius: 15px;
+        transition: transform 0.5s ease, box-shadow 0.3s ease;
+      }
+
+      .card:hover {
+        transform: translateY(-20px) scale(1.05) rotate(2deg);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+      }
+
+      .instructions {
+        font-size: 14px;
+        text-align: center;
+        max-width: 600px;
+        margin-top: 20px;
+        color: #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Transform Playground 🎨</h1>
+    <div class="card"></div>
+
+    <div class="instructions">
+      🖱 Hover over the box to see the magic!
+      <br />
+      Try editing the <b>transform</b> values in the CSS to test: <br />
+      <code>translateX, translateY, rotate, scale, skew</code>
+    </div>
+  </body>
+</html>
